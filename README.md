@@ -118,7 +118,7 @@ The Heston model extends GBM by introducing **stochastic volatility**, allowing 
 
 **Implementation Details:**
 - Uses two correlated Brownian motions
-- Volatility equation: `dv = κ(θ - v)dt + σ√v dW₂`
+- Volatility equation: `dv = κ(θ - v)dt + ξ√v dW₂`
 - Price equation: `dS = μS dt + √v S dW₁`
 - Ensures non-negative volatility
 
@@ -128,7 +128,7 @@ The Heston model extends GBM by introducing **stochastic volatility**, allowing 
 - Drift (μ): 0.10
 - Mean Reversion Speed (κ): 2.0
 - Long-term Variance (θ): 0.04
-- Volatility of Volatility (σ): 0.3
+- Volatility of Volatility (ξ): 0.3
 - Correlation (ρ): -0.7 (negative correlation typical in markets)
 - Time Horizon (T): 1 year
 - Time Step (dt): 1/252
@@ -228,7 +228,7 @@ Where:
 ### Heston Parameters
 - **Mean Reversion Speed (κ)**: How quickly volatility returns to long-term mean
 - **Long-term Variance (θ)**: Target variance level
-- **Vol of Vol (σ)**: Volatility of the variance process
+- **Vol of Vol (ξ)**: Volatility of the variance process
 - **Correlation (ρ)**: Correlation between price and volatility (-1 to 1)
 
 ### ABM Parameters
